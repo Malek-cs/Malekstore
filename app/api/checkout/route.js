@@ -2,7 +2,9 @@ import Stripe from "stripe"
 import '../../../envConfig.js'
 
 const API_KEY = process.env.STRIPE_SECRET_KEY
-const stripe = new Stripe(API_KEY)
+const stripe = new Stripe(API_KEY,{
+    apiVersion:'2026-01-28.clover'
+})
 
 export async function POST(request) {
     try {

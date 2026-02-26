@@ -67,7 +67,7 @@ export default function CartPage() {
                     const imgName = itemData.name === 'Candleengagement' ?
                         'Candleengagement' :
                         itemData.name.replaceAll(' Sticker.png', '').replaceAll(' ', '_')
-                        const imgUrl = 'low_res/' + imgName + '.png'
+                        const imgUrl = '/low_res/' + imgName + '.png'
 
                     return (
                         <div key={itemIndex} className="cart-item">
@@ -80,6 +80,7 @@ export default function CartPage() {
                                     <p><strong>Quantity</strong></p>
                                     <input type="number" value={itemQuantity} placeholder="2" onChange={(e) => {
                                         const newValue = e.target.value
+                                        console.log(imgUrl)
 
 
                                         handleIncrementProduct(itemData.default_price, newValue, itemData, true)

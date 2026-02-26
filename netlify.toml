@@ -1,4 +1,0 @@
-[bulid]
-     command = "npm run build"
-      base ="my-next-app"
-      publish=".next"
