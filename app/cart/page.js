@@ -66,9 +66,9 @@ export default function CartPage() {
 
                     const imgName = itemData.name === 'Candleengagement' ?
                         'Candleengagement' :
-                        itemData.name.replaceAll(' Sticker.png', '').replaceAll(' ', '_')
-                        const imgUrl = '/low_res/' + imgName + '.png'
-
+                        itemData.name.replaceAll('Candle.jpg', '').replaceAll(' ', '_')
+                        const imgUrl = '/low_res/' + imgName + 'jpg'
+                        console.log(imgUrl)
                     return (
                         <div key={itemIndex} className="cart-item">
                             <img src={imgUrl} alt={imgName + '-img'} />
